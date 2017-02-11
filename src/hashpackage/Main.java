@@ -6,8 +6,9 @@ package hashpackage;
 public class Main {
     public static void main(String[] args) {
         MyHashTable t=new MyHashTable(100);
-        t.put("table","стол");
-        String r=t.get("table");
+        for (int counter=0;counter<1000;counter++)
+            t.put(Integer.toString(counter),Integer.toString(counter+1));
+        String r=t.get(Integer.toString(194));
         System.out.println(r);
     }
 }
